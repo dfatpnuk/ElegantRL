@@ -1,6 +1,6 @@
 import gym
 from elegantrl.agents import AgentPPO
-from elegantrl.train.config import get_gym_env_args, Config #Arguments
+from elegantrl.train.config import get_gym_env_args, Arguments
 from elegantrl.train.run import *
 
 gym.logger.set_level(40)  # Block warning
@@ -18,7 +18,7 @@ env_args = {
     "target_return": 300,
     "id": "BipedalWalker-v3",
 }
-args = Config(AgentPPO, env_func=env_func, env_args=env_args)
+args = Arguments(AgentPPO, env_func=env_func, env_args=env_args)
 
 args.target_step = args.max_step * 4
 args.gamma = 0.98

@@ -8,7 +8,7 @@ numpy
 matplotlib
 gymnasium
 gym==0.25.2
-gym[Box2D]
+# gym[Box2D]
 
 # profiling
 wandb
